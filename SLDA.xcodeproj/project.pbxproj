@@ -1,0 +1,314 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4B9ACD1C14DCAB83006BC0D6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B9ACD1B14DCAB83006BC0D6 /* UIKit.framework */; };
+		4B9ACD1E14DCAB83006BC0D6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B9ACD1D14DCAB83006BC0D6 /* Foundation.framework */; };
+		4B9ACD2014DCAB83006BC0D6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B9ACD1F14DCAB83006BC0D6 /* CoreGraphics.framework */; };
+		4B9ACD2614DCAB83006BC0D6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4B9ACD2414DCAB83006BC0D6 /* InfoPlist.strings */; };
+		4B9ACD2814DCAB83006BC0D6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9ACD2714DCAB83006BC0D6 /* main.m */; };
+		4B9ACD2C14DCAB83006BC0D6 /* SLDAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9ACD2B14DCAB83006BC0D6 /* SLDAAppDelegate.m */; };
+		4B9ACD2F14DCAB83006BC0D6 /* SLDAFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9ACD2E14DCAB83006BC0D6 /* SLDAFirstViewController.m */; };
+		4B9ACD3114DCAB84006BC0D6 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B9ACD3014DCAB84006BC0D6 /* first.png */; };
+		4B9ACD3314DCAB84006BC0D6 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B9ACD3214DCAB84006BC0D6 /* first@2x.png */; };
+		4B9ACD3614DCAB84006BC0D6 /* SLDASecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9ACD3514DCAB84006BC0D6 /* SLDASecondViewController.m */; };
+		4B9ACD3814DCAB84006BC0D6 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B9ACD3714DCAB84006BC0D6 /* second.png */; };
+		4B9ACD3A14DCAB84006BC0D6 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B9ACD3914DCAB84006BC0D6 /* second@2x.png */; };
+		4B9ACD3D14DCAB84006BC0D6 /* SLDAFirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B9ACD3B14DCAB84006BC0D6 /* SLDAFirstViewController.xib */; };
+		4B9ACD4014DCAB84006BC0D6 /* SLDASecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B9ACD3E14DCAB84006BC0D6 /* SLDASecondViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4B9ACD1714DCAB83006BC0D6 /* SLDA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SLDA.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B9ACD1B14DCAB83006BC0D6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		4B9ACD1D14DCAB83006BC0D6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4B9ACD1F14DCAB83006BC0D6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		4B9ACD2314DCAB83006BC0D6 /* SLDA-Info.plist */ = {isa = PBXFileReference; path = "SLDA-Info.plist"; sourceTree = "<group>"; };
+		4B9ACD2514DCAB83006BC0D6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4B9ACD2714DCAB83006BC0D6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4B9ACD2914DCAB83006BC0D6 /* SLDA-Prefix.pch */ = {isa = PBXFileReference; path = "SLDA-Prefix.pch"; sourceTree = "<group>"; };
+		4B9ACD2A14DCAB83006BC0D6 /* SLDAAppDelegate.h */ = {isa = PBXFileReference; path = SLDAAppDelegate.h; sourceTree = "<group>"; };
+		4B9ACD2B14DCAB83006BC0D6 /* SLDAAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLDAAppDelegate.m; sourceTree = "<group>"; };
+		4B9ACD2D14DCAB83006BC0D6 /* SLDAFirstViewController.h */ = {isa = PBXFileReference; path = SLDAFirstViewController.h; sourceTree = "<group>"; };
+		4B9ACD2E14DCAB83006BC0D6 /* SLDAFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLDAFirstViewController.m; sourceTree = "<group>"; };
+		4B9ACD3014DCAB84006BC0D6 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
+		4B9ACD3214DCAB84006BC0D6 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
+		4B9ACD3414DCAB84006BC0D6 /* SLDASecondViewController.h */ = {isa = PBXFileReference; path = SLDASecondViewController.h; sourceTree = "<group>"; };
+		4B9ACD3514DCAB84006BC0D6 /* SLDASecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLDASecondViewController.m; sourceTree = "<group>"; };
+		4B9ACD3714DCAB84006BC0D6 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
+		4B9ACD3914DCAB84006BC0D6 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		4B9ACD3C14DCAB84006BC0D6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SLDAFirstViewController.xib; sourceTree = "<group>"; };
+		4B9ACD3F14DCAB84006BC0D6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SLDASecondViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4B9ACD1414DCAB83006BC0D6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B9ACD1C14DCAB83006BC0D6 /* UIKit.framework in Frameworks */,
+				4B9ACD1E14DCAB83006BC0D6 /* Foundation.framework in Frameworks */,
+				4B9ACD2014DCAB83006BC0D6 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4B9ACD0C14DCAB83006BC0D6 = {
+			isa = PBXGroup;
+			children = (
+				4B9ACD2114DCAB83006BC0D6 /* SLDA */,
+				4B9ACD1A14DCAB83006BC0D6 /* Frameworks */,
+				4B9ACD1814DCAB83006BC0D6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4B9ACD1814DCAB83006BC0D6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4B9ACD1714DCAB83006BC0D6 /* SLDA.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4B9ACD1A14DCAB83006BC0D6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4B9ACD1B14DCAB83006BC0D6 /* UIKit.framework */,
+				4B9ACD1D14DCAB83006BC0D6 /* Foundation.framework */,
+				4B9ACD1F14DCAB83006BC0D6 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4B9ACD2114DCAB83006BC0D6 /* SLDA */ = {
+			isa = PBXGroup;
+			children = (
+				4B9ACD2A14DCAB83006BC0D6 /* SLDAAppDelegate.h */,
+				4B9ACD2B14DCAB83006BC0D6 /* SLDAAppDelegate.m */,
+				4B9ACD2D14DCAB83006BC0D6 /* SLDAFirstViewController.h */,
+				4B9ACD2E14DCAB83006BC0D6 /* SLDAFirstViewController.m */,
+				4B9ACD3014DCAB84006BC0D6 /* first.png */,
+				4B9ACD3214DCAB84006BC0D6 /* first@2x.png */,
+				4B9ACD3414DCAB84006BC0D6 /* SLDASecondViewController.h */,
+				4B9ACD3514DCAB84006BC0D6 /* SLDASecondViewController.m */,
+				4B9ACD3714DCAB84006BC0D6 /* second.png */,
+				4B9ACD3914DCAB84006BC0D6 /* second@2x.png */,
+				4B9ACD3B14DCAB84006BC0D6 /* SLDAFirstViewController.xib */,
+				4B9ACD3E14DCAB84006BC0D6 /* SLDASecondViewController.xib */,
+				4B9ACD2214DCAB83006BC0D6 /* Supporting Files */,
+			);
+			path = SLDA;
+			sourceTree = "<group>";
+		};
+		4B9ACD2214DCAB83006BC0D6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4B9ACD2314DCAB83006BC0D6 /* SLDA-Info.plist */,
+				4B9ACD2414DCAB83006BC0D6 /* InfoPlist.strings */,
+				4B9ACD2714DCAB83006BC0D6 /* main.m */,
+				4B9ACD2914DCAB83006BC0D6 /* SLDA-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4B9ACD1614DCAB83006BC0D6 /* SLDA */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B9ACD4314DCAB84006BC0D6 /* Build configuration list for PBXNativeTarget "SLDA" */;
+			buildPhases = (
+				4B9ACD1314DCAB83006BC0D6 /* Sources */,
+				4B9ACD1414DCAB83006BC0D6 /* Frameworks */,
+				4B9ACD1514DCAB83006BC0D6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SLDA;
+			productName = SLDA;
+			productReference = 4B9ACD1714DCAB83006BC0D6 /* SLDA.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4B9ACD0E14DCAB83006BC0D6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "Spazz Gaming";
+			};
+			buildConfigurationList = 4B9ACD1114DCAB83006BC0D6 /* Build configuration list for PBXProject "SLDA" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4B9ACD0C14DCAB83006BC0D6;
+			productRefGroup = 4B9ACD1814DCAB83006BC0D6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4B9ACD1614DCAB83006BC0D6 /* SLDA */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4B9ACD1514DCAB83006BC0D6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B9ACD2614DCAB83006BC0D6 /* InfoPlist.strings in Resources */,
+				4B9ACD3114DCAB84006BC0D6 /* first.png in Resources */,
+				4B9ACD3314DCAB84006BC0D6 /* first@2x.png in Resources */,
+				4B9ACD3814DCAB84006BC0D6 /* second.png in Resources */,
+				4B9ACD3A14DCAB84006BC0D6 /* second@2x.png in Resources */,
+				4B9ACD3D14DCAB84006BC0D6 /* SLDAFirstViewController.xib in Resources */,
+				4B9ACD4014DCAB84006BC0D6 /* SLDASecondViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4B9ACD1314DCAB83006BC0D6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B9ACD2814DCAB83006BC0D6 /* main.m in Sources */,
+				4B9ACD2C14DCAB83006BC0D6 /* SLDAAppDelegate.m in Sources */,
+				4B9ACD2F14DCAB83006BC0D6 /* SLDAFirstViewController.m in Sources */,
+				4B9ACD3614DCAB84006BC0D6 /* SLDASecondViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4B9ACD2414DCAB83006BC0D6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4B9ACD2514DCAB83006BC0D6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		4B9ACD3B14DCAB84006BC0D6 /* SLDAFirstViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4B9ACD3C14DCAB84006BC0D6 /* en */,
+			);
+			name = SLDAFirstViewController.xib;
+			sourceTree = "<group>";
+		};
+		4B9ACD3E14DCAB84006BC0D6 /* SLDASecondViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4B9ACD3F14DCAB84006BC0D6 /* en */,
+			);
+			name = SLDASecondViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4B9ACD4114DCAB84006BC0D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4B9ACD4214DCAB84006BC0D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4B9ACD4414DCAB84006BC0D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SLDA/SLDA-Prefix.pch";
+				INFOPLIST_FILE = "SLDA/SLDA-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		4B9ACD4514DCAB84006BC0D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SLDA/SLDA-Prefix.pch";
+				INFOPLIST_FILE = "SLDA/SLDA-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4B9ACD1114DCAB83006BC0D6 /* Build configuration list for PBXProject "SLDA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B9ACD4114DCAB84006BC0D6 /* Debug */,
+				4B9ACD4214DCAB84006BC0D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4B9ACD4314DCAB84006BC0D6 /* Build configuration list for PBXNativeTarget "SLDA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B9ACD4414DCAB84006BC0D6 /* Debug */,
+				4B9ACD4514DCAB84006BC0D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4B9ACD0E14DCAB83006BC0D6 /* Project object */;
+}
