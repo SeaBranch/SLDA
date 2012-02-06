@@ -13,14 +13,16 @@
 		4B9ACD2614DCAB83006BC0D6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4B9ACD2414DCAB83006BC0D6 /* InfoPlist.strings */; };
 		4B9ACD2814DCAB83006BC0D6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9ACD2714DCAB83006BC0D6 /* main.m */; };
 		4B9ACD2C14DCAB83006BC0D6 /* SLDAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9ACD2B14DCAB83006BC0D6 /* SLDAAppDelegate.m */; };
-		4B9ACD2F14DCAB83006BC0D6 /* SLDAFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9ACD2E14DCAB83006BC0D6 /* SLDAFirstViewController.m */; };
+		4B9ACD2F14DCAB83006BC0D6 /* SLDAToDoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9ACD2E14DCAB83006BC0D6 /* SLDAToDoViewController.m */; };
 		4B9ACD3114DCAB84006BC0D6 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B9ACD3014DCAB84006BC0D6 /* first.png */; };
 		4B9ACD3314DCAB84006BC0D6 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B9ACD3214DCAB84006BC0D6 /* first@2x.png */; };
-		4B9ACD3614DCAB84006BC0D6 /* SLDASecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9ACD3514DCAB84006BC0D6 /* SLDASecondViewController.m */; };
+		4B9ACD3614DCAB84006BC0D6 /* SLDASettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9ACD3514DCAB84006BC0D6 /* SLDASettingsViewController.m */; };
 		4B9ACD3814DCAB84006BC0D6 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B9ACD3714DCAB84006BC0D6 /* second.png */; };
 		4B9ACD3A14DCAB84006BC0D6 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B9ACD3914DCAB84006BC0D6 /* second@2x.png */; };
-		4B9ACD3D14DCAB84006BC0D6 /* SLDAFirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B9ACD3B14DCAB84006BC0D6 /* SLDAFirstViewController.xib */; };
-		4B9ACD4014DCAB84006BC0D6 /* SLDASecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B9ACD3E14DCAB84006BC0D6 /* SLDASecondViewController.xib */; };
+		4B9ACD3D14DCAB84006BC0D6 /* SLDAToDoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B9ACD3B14DCAB84006BC0D6 /* SLDAToDoViewController.xib */; };
+		4B9ACD4014DCAB84006BC0D6 /* SLDASettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B9ACD3E14DCAB84006BC0D6 /* SLDASettingsViewController.xib */; };
+		4B9ACD4714DCAD4A006BC0D6 /* SLDAToDoTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B9ACD4614DCAD4A006BC0D6 /* SLDAToDoTVCell.xib */; };
+		4B9ACD4E14DCB941006BC0D6 /* SLDAToDoTVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9ACD4D14DCB941006BC0D6 /* SLDAToDoTVCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,22 +30,25 @@
 		4B9ACD1B14DCAB83006BC0D6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4B9ACD1D14DCAB83006BC0D6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4B9ACD1F14DCAB83006BC0D6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		4B9ACD2314DCAB83006BC0D6 /* SLDA-Info.plist */ = {isa = PBXFileReference; path = "SLDA-Info.plist"; sourceTree = "<group>"; };
+		4B9ACD2314DCAB83006BC0D6 /* SLDA-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SLDA-Info.plist"; sourceTree = "<group>"; };
 		4B9ACD2514DCAB83006BC0D6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4B9ACD2714DCAB83006BC0D6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		4B9ACD2914DCAB83006BC0D6 /* SLDA-Prefix.pch */ = {isa = PBXFileReference; path = "SLDA-Prefix.pch"; sourceTree = "<group>"; };
-		4B9ACD2A14DCAB83006BC0D6 /* SLDAAppDelegate.h */ = {isa = PBXFileReference; path = SLDAAppDelegate.h; sourceTree = "<group>"; };
+		4B9ACD2914DCAB83006BC0D6 /* SLDA-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SLDA-Prefix.pch"; sourceTree = "<group>"; };
+		4B9ACD2A14DCAB83006BC0D6 /* SLDAAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLDAAppDelegate.h; sourceTree = "<group>"; };
 		4B9ACD2B14DCAB83006BC0D6 /* SLDAAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLDAAppDelegate.m; sourceTree = "<group>"; };
-		4B9ACD2D14DCAB83006BC0D6 /* SLDAFirstViewController.h */ = {isa = PBXFileReference; path = SLDAFirstViewController.h; sourceTree = "<group>"; };
-		4B9ACD2E14DCAB83006BC0D6 /* SLDAFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLDAFirstViewController.m; sourceTree = "<group>"; };
+		4B9ACD2D14DCAB83006BC0D6 /* SLDAToDoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLDAToDoViewController.h; sourceTree = "<group>"; };
+		4B9ACD2E14DCAB83006BC0D6 /* SLDAToDoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLDAToDoViewController.m; sourceTree = "<group>"; };
 		4B9ACD3014DCAB84006BC0D6 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		4B9ACD3214DCAB84006BC0D6 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		4B9ACD3414DCAB84006BC0D6 /* SLDASecondViewController.h */ = {isa = PBXFileReference; path = SLDASecondViewController.h; sourceTree = "<group>"; };
-		4B9ACD3514DCAB84006BC0D6 /* SLDASecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLDASecondViewController.m; sourceTree = "<group>"; };
+		4B9ACD3414DCAB84006BC0D6 /* SLDASettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLDASettingsViewController.h; sourceTree = "<group>"; };
+		4B9ACD3514DCAB84006BC0D6 /* SLDASettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLDASettingsViewController.m; sourceTree = "<group>"; };
 		4B9ACD3714DCAB84006BC0D6 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		4B9ACD3914DCAB84006BC0D6 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
-		4B9ACD3C14DCAB84006BC0D6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SLDAFirstViewController.xib; sourceTree = "<group>"; };
-		4B9ACD3F14DCAB84006BC0D6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SLDASecondViewController.xib; sourceTree = "<group>"; };
+		4B9ACD3C14DCAB84006BC0D6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SLDAToDoViewController.xib; sourceTree = "<group>"; };
+		4B9ACD3F14DCAB84006BC0D6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SLDASettingsViewController.xib; sourceTree = "<group>"; };
+		4B9ACD4614DCAD4A006BC0D6 /* SLDAToDoTVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLDAToDoTVCell.xib; sourceTree = "<group>"; };
+		4B9ACD4C14DCB941006BC0D6 /* SLDAToDoTVCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLDAToDoTVCell.h; sourceTree = "<group>"; };
+		4B9ACD4D14DCB941006BC0D6 /* SLDAToDoTVCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLDAToDoTVCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,16 +97,19 @@
 			children = (
 				4B9ACD2A14DCAB83006BC0D6 /* SLDAAppDelegate.h */,
 				4B9ACD2B14DCAB83006BC0D6 /* SLDAAppDelegate.m */,
-				4B9ACD2D14DCAB83006BC0D6 /* SLDAFirstViewController.h */,
-				4B9ACD2E14DCAB83006BC0D6 /* SLDAFirstViewController.m */,
+				4B9ACD2D14DCAB83006BC0D6 /* SLDAToDoViewController.h */,
+				4B9ACD2E14DCAB83006BC0D6 /* SLDAToDoViewController.m */,
+				4B9ACD3B14DCAB84006BC0D6 /* SLDAToDoViewController.xib */,
+				4B9ACD4C14DCB941006BC0D6 /* SLDAToDoTVCell.h */,
+				4B9ACD4D14DCB941006BC0D6 /* SLDAToDoTVCell.m */,
+				4B9ACD4614DCAD4A006BC0D6 /* SLDAToDoTVCell.xib */,
 				4B9ACD3014DCAB84006BC0D6 /* first.png */,
 				4B9ACD3214DCAB84006BC0D6 /* first@2x.png */,
-				4B9ACD3414DCAB84006BC0D6 /* SLDASecondViewController.h */,
-				4B9ACD3514DCAB84006BC0D6 /* SLDASecondViewController.m */,
+				4B9ACD3414DCAB84006BC0D6 /* SLDASettingsViewController.h */,
+				4B9ACD3514DCAB84006BC0D6 /* SLDASettingsViewController.m */,
+				4B9ACD3E14DCAB84006BC0D6 /* SLDASettingsViewController.xib */,
 				4B9ACD3714DCAB84006BC0D6 /* second.png */,
 				4B9ACD3914DCAB84006BC0D6 /* second@2x.png */,
-				4B9ACD3B14DCAB84006BC0D6 /* SLDAFirstViewController.xib */,
-				4B9ACD3E14DCAB84006BC0D6 /* SLDASecondViewController.xib */,
 				4B9ACD2214DCAB83006BC0D6 /* Supporting Files */,
 			);
 			path = SLDA;
@@ -174,8 +182,9 @@
 				4B9ACD3314DCAB84006BC0D6 /* first@2x.png in Resources */,
 				4B9ACD3814DCAB84006BC0D6 /* second.png in Resources */,
 				4B9ACD3A14DCAB84006BC0D6 /* second@2x.png in Resources */,
-				4B9ACD3D14DCAB84006BC0D6 /* SLDAFirstViewController.xib in Resources */,
-				4B9ACD4014DCAB84006BC0D6 /* SLDASecondViewController.xib in Resources */,
+				4B9ACD3D14DCAB84006BC0D6 /* SLDAToDoViewController.xib in Resources */,
+				4B9ACD4014DCAB84006BC0D6 /* SLDASettingsViewController.xib in Resources */,
+				4B9ACD4714DCAD4A006BC0D6 /* SLDAToDoTVCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,8 +197,9 @@
 			files = (
 				4B9ACD2814DCAB83006BC0D6 /* main.m in Sources */,
 				4B9ACD2C14DCAB83006BC0D6 /* SLDAAppDelegate.m in Sources */,
-				4B9ACD2F14DCAB83006BC0D6 /* SLDAFirstViewController.m in Sources */,
-				4B9ACD3614DCAB84006BC0D6 /* SLDASecondViewController.m in Sources */,
+				4B9ACD2F14DCAB83006BC0D6 /* SLDAToDoViewController.m in Sources */,
+				4B9ACD3614DCAB84006BC0D6 /* SLDASettingsViewController.m in Sources */,
+				4B9ACD4E14DCB941006BC0D6 /* SLDAToDoTVCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,20 +214,20 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		4B9ACD3B14DCAB84006BC0D6 /* SLDAFirstViewController.xib */ = {
+		4B9ACD3B14DCAB84006BC0D6 /* SLDAToDoViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				4B9ACD3C14DCAB84006BC0D6 /* en */,
 			);
-			name = SLDAFirstViewController.xib;
+			name = SLDAToDoViewController.xib;
 			sourceTree = "<group>";
 		};
-		4B9ACD3E14DCAB84006BC0D6 /* SLDASecondViewController.xib */ = {
+		4B9ACD3E14DCAB84006BC0D6 /* SLDASettingsViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				4B9ACD3F14DCAB84006BC0D6 /* en */,
 			);
-			name = SLDASecondViewController.xib;
+			name = SLDASettingsViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

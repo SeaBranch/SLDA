@@ -8,9 +8,9 @@
 
 #import "SLDAAppDelegate.h"
 
-#import "SLDAFirstViewController.h"
+#import "SLDAToDoViewController.h"
 
-#import "SLDASecondViewController.h"
+#import "SLDASettingsViewController.h"
 
 @implementation SLDAAppDelegate
 
@@ -28,8 +28,8 @@
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
-    UIViewController *viewController1 = [[[SLDAFirstViewController alloc] initWithNibName:@"SLDAFirstViewController" bundle:nil] autorelease];
-    UIViewController *viewController2 = [[[SLDASecondViewController alloc] initWithNibName:@"SLDASecondViewController" bundle:nil] autorelease];
+    UIViewController *viewController1 = [[[SLDAToDoViewController alloc] initWithNibName:@"SLDAToDoViewController" bundle:nil] autorelease];
+    UIViewController *viewController2 = [[[SLDASettingsViewController alloc] initWithNibName:@"SLDASettingsViewController" bundle:nil] autorelease];
     self.tabBarController = [[[UITabBarController alloc] init] autorelease];
     self.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, viewController2, nil];
     self.window.rootViewController = self.tabBarController;
