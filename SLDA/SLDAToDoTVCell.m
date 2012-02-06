@@ -7,6 +7,7 @@
 //
 
 #import "SLDAToDoTVCell.h"
+#import "IVGUtils.h"
 
 @implementation SLDAToDoTVCell
 
@@ -44,7 +45,7 @@
 
     self.nameLabel.text = name;
     
-    NSString* dueText = [date accessibilityValue];
+    NSString* dueText = [IVGUtils stringFromDate:date withFormat:@"MMM d"];
     self.dueLabel.text = dueText;
 }
 

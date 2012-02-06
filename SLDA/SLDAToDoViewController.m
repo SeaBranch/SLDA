@@ -7,6 +7,7 @@
 //
 
 #import "SLDAToDoViewController.h"
+#import "IVGUtils.h"
 
 @interface SLDAToDoViewController()
 
@@ -124,23 +125,37 @@
 //    return [SPSExhibitorTableViewCell heightForRow:exhibitorData];
 //}
 
+- (NSDate *) dateFromYear:(NSInteger) year month:(NSInteger) month day:(NSInteger) day
+                     hour:(NSInteger) hour minute:(NSInteger) minute second:(NSInteger) second {
+    NSDateComponents *comps = [[NSDateComponents alloc] init];
+    [comps setYear:year];
+    [comps setMonth:month];
+    [comps setDay:day];
+    [comps setHour:hour];
+    [comps setMinute:minute];
+    [comps setSecond:second];
+    [comps setTimeZone:[[NSCalendar currentCalendar] timeZone]];
+    NSDate *result = [[NSCalendar currentCalendar] dateFromComponents:comps];
+    [comps release];
+    return result;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    /*static NSString *cellIdentifier = @"SLDAToDoTVCell";
+    static NSString *cellIdentifier = @"SLDAToDoTVCellid";
     SLDAToDoTVCell *cell = (SLDAToDoTVCell *) [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (cell == nil) {
-        // Since SPSExhibitorTableViewCell's file owner is SPSExhibitorTableViewController,
-        // we can load the nib and attach outlets conviently
-        // as long as the only time we use 'self.configCell' is here, there is no problem
         NSString *nibName =  @"SLDAToDoTVCell";
         [[NSBundle mainBundle] loadNibNamed:nibName
                                       owner:self 
                                     options:nil];
         cell = self.configCell;
         //[cell configureInitial];
-        [cell configureData:@"test name" withDate:[NSDate date]];
-        
-        [tableView_ addSubview:cell];
-    }*/
+    }
+    
+    
+    [cell configureData:@"test name" withDate:[self dateFromYear:2011 month:9 day:8 hour:13 minute:0 second:0]];
+
+    /*
     static NSString *cellIdentifier = @"cell";
     UITableViewCell *cell = (UITableViewCell *) [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     NSLog(@"tvc[%@] cell=%@", indexPath, cell);
@@ -148,7 +163,7 @@
         
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier] autorelease];
     }
-    cell.textLabel.text = [NSString stringWithFormat:@"row:%d",[indexPath row]];
+    cell.textLabel.text = [NSString stringWithFormat:@"row:%d",[indexPath row]];*/
     
 //    NSMutableArray *sectionData = [self.data objectAtIndex:[indexPath section] outOfRange:nil];
 //    NSMutableArray *exhibitorData = [sectionData objectAtIndex:[indexPath row] outOfRange:nil];
