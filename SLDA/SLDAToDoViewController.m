@@ -8,6 +8,7 @@
 
 #import "SLDAToDoViewController.h"
 #import "IVGUtils.h"
+#import "SLDAProjectVC.h"
 
 @interface SLDAToDoViewController()
 
@@ -138,6 +139,16 @@
     NSDate *result = [[NSCalendar currentCalendar] dateFromComponents:comps];
     [comps release];
     return result;
+}
+
+
+-(IBAction)pressedAddButton:(id)sender{
+
+    SLDAProjectVC* projectVC = [[[SLDAProjectVC alloc] init] autorelease];
+    
+    NSLog(@"add a project");
+    [self presentModalViewController:projectVC animated:YES];
+
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

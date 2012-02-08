@@ -24,6 +24,17 @@
 		4B9ACD4714DCAD4A006BC0D6 /* SLDAToDoTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B9ACD4614DCAD4A006BC0D6 /* SLDAToDoTVCell.xib */; };
 		4B9ACD4E14DCB941006BC0D6 /* SLDAToDoTVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9ACD4D14DCB941006BC0D6 /* SLDAToDoTVCell.m */; };
 		4B9ACD5514E06435006BC0D6 /* IVGUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9ACD5414E06435006BC0D6 /* IVGUtils.m */; };
+		4B9ACD6714E0A143006BC0D6 /* ResizeBarTempViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9ACD6614E0A143006BC0D6 /* ResizeBarTempViewController.m */; };
+		4B9ACD6C14E0A152006BC0D6 /* ResizeableBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9ACD6914E0A151006BC0D6 /* ResizeableBar.m */; };
+		4B9ACD6D14E0A152006BC0D6 /* EditBubble.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9ACD6B14E0A152006BC0D6 /* EditBubble.m */; };
+		4B9ACD7914E0D0EC006BC0D6 /* SLDAProjectVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9ACD7714E0D0EA006BC0D6 /* SLDAProjectVC.m */; };
+		4B9ACD7A14E0D0EC006BC0D6 /* SLDAProjectVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B9ACD7814E0D0EB006BC0D6 /* SLDAProjectVC.xib */; };
+		4B9ACD7D14E1CB71006BC0D6 /* ScheduleDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4B9ACD7B14E1CB6E006BC0D6 /* ScheduleDataModel.xcdatamodeld */; };
+		4B9ACD8314E30C12006BC0D6 /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9ACD8214E30C12006BC0D6 /* Category.m */; };
+		4B9ACD8614E30C13006BC0D6 /* Project.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9ACD8514E30C13006BC0D6 /* Project.m */; };
+		4B9ACD8914E30C13006BC0D6 /* CalendarEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9ACD8814E30C13006BC0D6 /* CalendarEvent.m */; };
+		4B9ACD8B14E31AB1006BC0D6 /* NSManagedObjectContext+IVGUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9ACD8A14E31AB1006BC0D6 /* NSManagedObjectContext+IVGUtils.m */; };
+		4B9ACD8E14E32591006BC0D6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B9ACD8D14E32590006BC0D6 /* CoreData.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,8 +61,27 @@
 		4B9ACD4614DCAD4A006BC0D6 /* SLDAToDoTVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLDAToDoTVCell.xib; sourceTree = "<group>"; };
 		4B9ACD4C14DCB941006BC0D6 /* SLDAToDoTVCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLDAToDoTVCell.h; sourceTree = "<group>"; };
 		4B9ACD4D14DCB941006BC0D6 /* SLDAToDoTVCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLDAToDoTVCell.m; sourceTree = "<group>"; };
-		4B9ACD5314E06435006BC0D6 /* IVGUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IVGUtils.h; sourceTree = "<group>"; };
-		4B9ACD5414E06435006BC0D6 /* IVGUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IVGUtils.m; sourceTree = "<group>"; };
+		4B9ACD5314E06435006BC0D6 /* IVGUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IVGUtils.h; path = SLDA/IVGUtils.h; sourceTree = "<group>"; };
+		4B9ACD5414E06435006BC0D6 /* IVGUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IVGUtils.m; path = SLDA/IVGUtils.m; sourceTree = "<group>"; };
+		4B9ACD6514E0A142006BC0D6 /* ResizeBarTempViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResizeBarTempViewController.h; sourceTree = "<group>"; };
+		4B9ACD6614E0A143006BC0D6 /* ResizeBarTempViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResizeBarTempViewController.m; sourceTree = "<group>"; };
+		4B9ACD6814E0A151006BC0D6 /* ResizeableBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResizeableBar.h; sourceTree = "<group>"; };
+		4B9ACD6914E0A151006BC0D6 /* ResizeableBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResizeableBar.m; sourceTree = "<group>"; };
+		4B9ACD6A14E0A152006BC0D6 /* EditBubble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditBubble.h; sourceTree = "<group>"; };
+		4B9ACD6B14E0A152006BC0D6 /* EditBubble.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditBubble.m; sourceTree = "<group>"; };
+		4B9ACD7614E0D0EA006BC0D6 /* SLDAProjectVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLDAProjectVC.h; sourceTree = "<group>"; };
+		4B9ACD7714E0D0EA006BC0D6 /* SLDAProjectVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLDAProjectVC.m; sourceTree = "<group>"; };
+		4B9ACD7814E0D0EB006BC0D6 /* SLDAProjectVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLDAProjectVC.xib; sourceTree = "<group>"; };
+		4B9ACD7C14E1CB70006BC0D6 /* ScheduleDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ScheduleDataModel.xcdatamodel; sourceTree = "<group>"; };
+		4B9ACD8114E30C12006BC0D6 /* Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Category.h; sourceTree = "<group>"; };
+		4B9ACD8214E30C12006BC0D6 /* Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Category.m; sourceTree = "<group>"; };
+		4B9ACD8414E30C13006BC0D6 /* Project.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Project.h; sourceTree = "<group>"; };
+		4B9ACD8514E30C13006BC0D6 /* Project.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Project.m; sourceTree = "<group>"; };
+		4B9ACD8714E30C13006BC0D6 /* CalendarEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarEvent.h; sourceTree = "<group>"; };
+		4B9ACD8814E30C13006BC0D6 /* CalendarEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarEvent.m; sourceTree = "<group>"; };
+		4B9ACD8A14E31AB1006BC0D6 /* NSManagedObjectContext+IVGUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+IVGUtils.m"; sourceTree = "<group>"; };
+		4B9ACD8C14E31AC0006BC0D6 /* NSManagedObjectContext+IVGUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+IVGUtils.h"; sourceTree = "<group>"; };
+		4B9ACD8D14E32590006BC0D6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B9ACD8E14E32591006BC0D6 /* CoreData.framework in Frameworks */,
 				4B9ACD1C14DCAB83006BC0D6 /* UIKit.framework in Frameworks */,
 				4B9ACD1E14DCAB83006BC0D6 /* Foundation.framework in Frameworks */,
 				4B9ACD2014DCAB83006BC0D6 /* CoreGraphics.framework in Frameworks */,
@@ -71,6 +102,8 @@
 		4B9ACD0C14DCAB83006BC0D6 = {
 			isa = PBXGroup;
 			children = (
+				4B9ACD8D14E32590006BC0D6 /* CoreData.framework */,
+				4B9ACD7E14E30481006BC0D6 /* External Classes */,
 				4B9ACD2114DCAB83006BC0D6 /* SLDA */,
 				4B9ACD1A14DCAB83006BC0D6 /* Frameworks */,
 				4B9ACD1814DCAB83006BC0D6 /* Products */,
@@ -98,23 +131,23 @@
 		4B9ACD2114DCAB83006BC0D6 /* SLDA */ = {
 			isa = PBXGroup;
 			children = (
-				4B9ACD5314E06435006BC0D6 /* IVGUtils.h */,
-				4B9ACD5414E06435006BC0D6 /* IVGUtils.m */,
 				4B9ACD2A14DCAB83006BC0D6 /* SLDAAppDelegate.h */,
 				4B9ACD2B14DCAB83006BC0D6 /* SLDAAppDelegate.m */,
-				4B9ACD2D14DCAB83006BC0D6 /* SLDAToDoViewController.h */,
-				4B9ACD2E14DCAB83006BC0D6 /* SLDAToDoViewController.m */,
-				4B9ACD3B14DCAB84006BC0D6 /* SLDAToDoViewController.xib */,
+				4B9ACD8014E30894006BC0D6 /* Core Data */,
+				4B9ACD7F14E30871006BC0D6 /* View Controllers */,
 				4B9ACD4C14DCB941006BC0D6 /* SLDAToDoTVCell.h */,
 				4B9ACD4D14DCB941006BC0D6 /* SLDAToDoTVCell.m */,
 				4B9ACD4614DCAD4A006BC0D6 /* SLDAToDoTVCell.xib */,
 				4B9ACD3014DCAB84006BC0D6 /* first.png */,
 				4B9ACD3214DCAB84006BC0D6 /* first@2x.png */,
-				4B9ACD3414DCAB84006BC0D6 /* SLDASettingsViewController.h */,
-				4B9ACD3514DCAB84006BC0D6 /* SLDASettingsViewController.m */,
-				4B9ACD3E14DCAB84006BC0D6 /* SLDASettingsViewController.xib */,
 				4B9ACD3714DCAB84006BC0D6 /* second.png */,
 				4B9ACD3914DCAB84006BC0D6 /* second@2x.png */,
+				4B9ACD6514E0A142006BC0D6 /* ResizeBarTempViewController.h */,
+				4B9ACD6614E0A143006BC0D6 /* ResizeBarTempViewController.m */,
+				4B9ACD6814E0A151006BC0D6 /* ResizeableBar.h */,
+				4B9ACD6914E0A151006BC0D6 /* ResizeableBar.m */,
+				4B9ACD6A14E0A152006BC0D6 /* EditBubble.h */,
+				4B9ACD6B14E0A152006BC0D6 /* EditBubble.m */,
 				4B9ACD2214DCAB83006BC0D6 /* Supporting Files */,
 			);
 			path = SLDA;
@@ -129,6 +162,47 @@
 				4B9ACD2914DCAB83006BC0D6 /* SLDA-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4B9ACD7E14E30481006BC0D6 /* External Classes */ = {
+			isa = PBXGroup;
+			children = (
+				4B9ACD8C14E31AC0006BC0D6 /* NSManagedObjectContext+IVGUtils.h */,
+				4B9ACD8A14E31AB1006BC0D6 /* NSManagedObjectContext+IVGUtils.m */,
+				4B9ACD5314E06435006BC0D6 /* IVGUtils.h */,
+				4B9ACD5414E06435006BC0D6 /* IVGUtils.m */,
+			);
+			name = "External Classes";
+			sourceTree = "<group>";
+		};
+		4B9ACD7F14E30871006BC0D6 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4B9ACD2D14DCAB83006BC0D6 /* SLDAToDoViewController.h */,
+				4B9ACD2E14DCAB83006BC0D6 /* SLDAToDoViewController.m */,
+				4B9ACD3B14DCAB84006BC0D6 /* SLDAToDoViewController.xib */,
+				4B9ACD7614E0D0EA006BC0D6 /* SLDAProjectVC.h */,
+				4B9ACD7714E0D0EA006BC0D6 /* SLDAProjectVC.m */,
+				4B9ACD7814E0D0EB006BC0D6 /* SLDAProjectVC.xib */,
+				4B9ACD3414DCAB84006BC0D6 /* SLDASettingsViewController.h */,
+				4B9ACD3514DCAB84006BC0D6 /* SLDASettingsViewController.m */,
+				4B9ACD3E14DCAB84006BC0D6 /* SLDASettingsViewController.xib */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		4B9ACD8014E30894006BC0D6 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				4B9ACD7B14E1CB6E006BC0D6 /* ScheduleDataModel.xcdatamodeld */,
+				4B9ACD8714E30C13006BC0D6 /* CalendarEvent.h */,
+				4B9ACD8814E30C13006BC0D6 /* CalendarEvent.m */,
+				4B9ACD8414E30C13006BC0D6 /* Project.h */,
+				4B9ACD8514E30C13006BC0D6 /* Project.m */,
+				4B9ACD8114E30C12006BC0D6 /* Category.h */,
+				4B9ACD8214E30C12006BC0D6 /* Category.m */,
+			);
+			name = "Core Data";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +264,7 @@
 				4B9ACD3D14DCAB84006BC0D6 /* SLDAToDoViewController.xib in Resources */,
 				4B9ACD4014DCAB84006BC0D6 /* SLDASettingsViewController.xib in Resources */,
 				4B9ACD4714DCAD4A006BC0D6 /* SLDAToDoTVCell.xib in Resources */,
+				4B9ACD7A14E0D0EC006BC0D6 /* SLDAProjectVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,6 +281,15 @@
 				4B9ACD3614DCAB84006BC0D6 /* SLDASettingsViewController.m in Sources */,
 				4B9ACD4E14DCB941006BC0D6 /* SLDAToDoTVCell.m in Sources */,
 				4B9ACD5514E06435006BC0D6 /* IVGUtils.m in Sources */,
+				4B9ACD6714E0A143006BC0D6 /* ResizeBarTempViewController.m in Sources */,
+				4B9ACD6C14E0A152006BC0D6 /* ResizeableBar.m in Sources */,
+				4B9ACD6D14E0A152006BC0D6 /* EditBubble.m in Sources */,
+				4B9ACD7914E0D0EC006BC0D6 /* SLDAProjectVC.m in Sources */,
+				4B9ACD7D14E1CB71006BC0D6 /* ScheduleDataModel.xcdatamodeld in Sources */,
+				4B9ACD8314E30C12006BC0D6 /* Category.m in Sources */,
+				4B9ACD8614E30C13006BC0D6 /* Project.m in Sources */,
+				4B9ACD8914E30C13006BC0D6 /* CalendarEvent.m in Sources */,
+				4B9ACD8B14E31AB1006BC0D6 /* NSManagedObjectContext+IVGUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +410,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4B9ACD7B14E1CB6E006BC0D6 /* ScheduleDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4B9ACD7C14E1CB70006BC0D6 /* ScheduleDataModel.xcdatamodel */,
+			);
+			currentVersion = 4B9ACD7C14E1CB70006BC0D6 /* ScheduleDataModel.xcdatamodel */;
+			path = ScheduleDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 4B9ACD0E14DCAB83006BC0D6 /* Project object */;
 }
