@@ -22,6 +22,7 @@
 @property (nonatomic,retain) IBOutlet UILabel* typeLabel;
 @property (nonatomic,retain) IBOutlet UIButton* categoryButton;
 @property (nonatomic,retain) IBOutlet UILabel* categoryLabel;
+@property (nonatomic,retain) IBOutlet UIButton* addCategoryButton;
 
 
 @end

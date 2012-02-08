@@ -8,6 +8,7 @@
 
 #import "Project.h"
 #import "Category.h"
+#import "CalendarEvent.h"
 
 
 @implementation Project
@@ -17,5 +18,22 @@
 @dynamic type;
 @dynamic events;
 @dynamic category;
+
+
+
+- (id)init {
+    self = [super init];
+    if (self) {
+        
+        CalendarEvent* endEvent;
+        endEvent.title = @"complete";
+        endEvent.endDate = nil;
+        endEvent.startDate = self.completionDate;
+        endEvent.category = self.category;
+        
+        [self addEventsObject:endEvent];
+    }
+    return self;
+}
 
 @end

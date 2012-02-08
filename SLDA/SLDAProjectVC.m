@@ -22,6 +22,7 @@
 @synthesize typeLabel;
 @synthesize categoryButton;
 @synthesize categoryLabel;
+@synthesize addCategoryButton;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -65,6 +66,11 @@
 
     [self.presentingViewController dismissModalViewControllerAnimated:YES];
     
+}
+-(IBAction)addCategoryButtonPressed:(id)sender{
+
+    NSLog(@"add a Category!!!");
+
 }
 
 @end

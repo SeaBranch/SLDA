@@ -8,12 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import "Category.h"
 
 @class Project;
 
 @interface CalendarEvent : NSManagedObject
 
-@property (nonatomic, retain) NSString * category;
+@property (nonatomic, retain) Category * category;
 @property (nonatomic, retain) NSString * title;
 @property (nonatomic, retain) NSDate * endDate;
 @property (nonatomic, retain) NSDate * startDate;

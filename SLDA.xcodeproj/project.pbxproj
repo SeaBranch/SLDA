@@ -35,6 +35,7 @@
 		4B9ACD8914E30C13006BC0D6 /* CalendarEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9ACD8814E30C13006BC0D6 /* CalendarEvent.m */; };
 		4B9ACD8B14E31AB1006BC0D6 /* NSManagedObjectContext+IVGUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9ACD8A14E31AB1006BC0D6 /* NSManagedObjectContext+IVGUtils.m */; };
 		4B9ACD8E14E32591006BC0D6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B9ACD8D14E32590006BC0D6 /* CoreData.framework */; };
+		4B9ACD9114E33C72006BC0D6 /* iPhone blue pluss button 37 x 37.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B9ACD9014E33C72006BC0D6 /* iPhone blue pluss button 37 x 37.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +83,7 @@
 		4B9ACD8A14E31AB1006BC0D6 /* NSManagedObjectContext+IVGUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+IVGUtils.m"; sourceTree = "<group>"; };
 		4B9ACD8C14E31AC0006BC0D6 /* NSManagedObjectContext+IVGUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+IVGUtils.h"; sourceTree = "<group>"; };
 		4B9ACD8D14E32590006BC0D6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		4B9ACD9014E33C72006BC0D6 /* iPhone blue pluss button 37 x 37.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPhone blue pluss button 37 x 37.png"; path = "../../../externalXCFiles/iPhone blue pluss button 37 x 37.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 		4B9ACD2214DCAB83006BC0D6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4B9ACD8F14E33C47006BC0D6 /* resouces */,
 				4B9ACD2314DCAB83006BC0D6 /* SLDA-Info.plist */,
 				4B9ACD2414DCAB83006BC0D6 /* InfoPlist.strings */,
 				4B9ACD2714DCAB83006BC0D6 /* main.m */,
@@ -203,6 +206,14 @@
 				4B9ACD8214E30C12006BC0D6 /* Category.m */,
 			);
 			name = "Core Data";
+			sourceTree = "<group>";
+		};
+		4B9ACD8F14E33C47006BC0D6 /* resouces */ = {
+			isa = PBXGroup;
+			children = (
+				4B9ACD9014E33C72006BC0D6 /* iPhone blue pluss button 37 x 37.png */,
+			);
+			name = resouces;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +276,7 @@
 				4B9ACD4014DCAB84006BC0D6 /* SLDASettingsViewController.xib in Resources */,
 				4B9ACD4714DCAD4A006BC0D6 /* SLDAToDoTVCell.xib in Resources */,
 				4B9ACD7A14E0D0EC006BC0D6 /* SLDAProjectVC.xib in Resources */,
+				4B9ACD9114E33C72006BC0D6 /* iPhone blue pluss button 37 x 37.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
