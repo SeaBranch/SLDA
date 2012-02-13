@@ -28,6 +28,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    [DummyDataLoader rmData];
+    
+//    [DummyDataLoader loadData];
+
+    
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
     UIViewController *viewController1 = [[[SLDAToDoViewController alloc] initWithNibName:@"SLDAToDoViewController" bundle:nil] autorelease];
@@ -36,7 +42,6 @@
     self.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, viewController2, nil];
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
-    [DummyDataLoader loadData];
     
     return YES;
 }

@@ -15,6 +15,13 @@
 
 @implementation DummyDataLoader
 
++(void) rmData{
+
+    NSURL *baseURL = [[[NSFileManager defaultManager] URLsForDirectory:NSLibraryDirectory inDomains:NSUserDomainMask] lastObject];
+    NSURL *storeURL = [baseURL URLByAppendingPathComponent:@"ScheduleDataModel.sqlite"];
+
+    [[NSFileManager defaultManager] removeItemAtURL:storeURL error:nil];
+}
 
 +(void) loadData{
 

@@ -12,6 +12,7 @@
 @interface DummyDataLoader : NSObject
 
 +(void) loadData;
++(void) rmData;
 
 
 @end
