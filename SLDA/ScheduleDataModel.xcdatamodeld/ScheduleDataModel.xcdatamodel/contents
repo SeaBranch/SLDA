@@ -19,8 +19,8 @@
         <relationship name="events" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="CalendarEvent" inverseName="project" inverseEntity="CalendarEvent" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Project" positionX="160" positionY="-27" width="128" height="120"/>
         <element name="CalendarEvent" positionX="333" positionY="-27" width="128" height="105"/>
         <element name="Category" positionX="-11" positionY="-27" width="128" height="90"/>
+        <element name="Project" positionX="160" positionY="-27" width="128" height="120"/>
     </elements>
 </model>

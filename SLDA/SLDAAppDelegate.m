@@ -31,7 +31,7 @@
     
     [DummyDataLoader rmData];
     
-//    [DummyDataLoader loadData];
+    [DummyDataLoader loadData];
 
     
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];

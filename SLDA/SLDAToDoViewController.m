@@ -9,6 +9,9 @@
 #import "SLDAToDoViewController.h"
 #import "IVGUtils.h"
 #import "SLDAProjectVC.h"
+#import "SLADataModel.h"
+#import "NSManagedObjectContext+IVGUtils.h"
+#import "SLACoreDataFiles.h"
 
 @interface SLDAToDoViewController()
 
@@ -164,6 +167,7 @@
     }
     
     
+    
     [cell configureData:@"test name" withDate:[self dateFromYear:2011 month:9 day:8 hour:13 minute:0 second:0]];
 
     /*
@@ -191,6 +195,24 @@
     // Return YES for supported orientations
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
+
+- (void) pullDataFromContext{
+
+    NSManagedObjectContext* ctx = [SLADataModel sharedDataModel].context;
+    NSEntityDescription* entity = [NSEntityDescription entityForName:@"CalendarEvent" inManagedObjectContext:ctx];
+    
+    
+    NSArray *fetchedResults;
+    for (int i = 0; i<[fetchedResults count]; i++){
+    
+        CalendarEvent* evnt = [fetchedResults objectAtIndex:i];
+        
+        
+    
+    }
+    
+}
+
 
 #pragma mark- table view delegates
 

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4B26D63814E9935D000A8EA3 /* DummyDataLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B26D63714E9935C000A8EA3 /* DummyDataLoader.m */; };
 		4B26D63B14E995A0000A8EA3 /* SLADataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B26D63A14E995A0000A8EA3 /* SLADataModel.m */; };
+		4B26D63D14E9CBA7000A8EA3 /* SLACoreDataFiles.h in Resources */ = {isa = PBXBuildFile; fileRef = 4B26D63C14E9CBA7000A8EA3 /* SLACoreDataFiles.h */; };
 		4B9ACD1C14DCAB83006BC0D6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B9ACD1B14DCAB83006BC0D6 /* UIKit.framework */; };
 		4B9ACD1E14DCAB83006BC0D6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B9ACD1D14DCAB83006BC0D6 /* Foundation.framework */; };
 		4B9ACD2014DCAB83006BC0D6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B9ACD1F14DCAB83006BC0D6 /* CoreGraphics.framework */; };
@@ -58,6 +59,7 @@
 		4B26D63714E9935C000A8EA3 /* DummyDataLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DummyDataLoader.m; sourceTree = "<group>"; };
 		4B26D63914E995A0000A8EA3 /* SLADataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLADataModel.h; sourceTree = "<group>"; };
 		4B26D63A14E995A0000A8EA3 /* SLADataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLADataModel.m; sourceTree = "<group>"; };
+		4B26D63C14E9CBA7000A8EA3 /* SLACoreDataFiles.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; path = SLACoreDataFiles.h; sourceTree = "<group>"; };
 		4B9ACD1714DCAB83006BC0D6 /* SLDA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SLDA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B9ACD1B14DCAB83006BC0D6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4B9ACD1D14DCAB83006BC0D6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -252,6 +254,7 @@
 				4B9ACD8514E30C13006BC0D6 /* Project.m */,
 				4B9ACD8114E30C12006BC0D6 /* Category.h */,
 				4B9ACD8214E30C12006BC0D6 /* Category.m */,
+				4B26D63C14E9CBA7000A8EA3 /* SLACoreDataFiles.h */,
 			);
 			name = "Core Data";
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 				4B9ACDAC14E45C5D006BC0D6 /* nws_round_red1.png in Resources */,
 				4B9ACDAD14E45C5D006BC0D6 /* nws_round_white1.png in Resources */,
 				4B9ACDAE14E45C5D006BC0D6 /* nws_round_yellow1.png in Resources */,
+				4B26D63D14E9CBA7000A8EA3 /* SLACoreDataFiles.h in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
