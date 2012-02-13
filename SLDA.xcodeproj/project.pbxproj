@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B26D63814E9935D000A8EA3 /* DummyDataLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B26D63714E9935C000A8EA3 /* DummyDataLoader.m */; };
+		4B26D63B14E995A0000A8EA3 /* SLADataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B26D63A14E995A0000A8EA3 /* SLADataModel.m */; };
 		4B9ACD1C14DCAB83006BC0D6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B9ACD1B14DCAB83006BC0D6 /* UIKit.framework */; };
 		4B9ACD1E14DCAB83006BC0D6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B9ACD1D14DCAB83006BC0D6 /* Foundation.framework */; };
 		4B9ACD2014DCAB83006BC0D6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B9ACD1F14DCAB83006BC0D6 /* CoreGraphics.framework */; };
@@ -36,9 +38,26 @@
 		4B9ACD8B14E31AB1006BC0D6 /* NSManagedObjectContext+IVGUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9ACD8A14E31AB1006BC0D6 /* NSManagedObjectContext+IVGUtils.m */; };
 		4B9ACD8E14E32591006BC0D6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B9ACD8D14E32590006BC0D6 /* CoreData.framework */; };
 		4B9ACD9314E343A9006BC0D6 /* iPhone blue pluss button 37 x 37.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B9ACD9214E343A9006BC0D6 /* iPhone blue pluss button 37 x 37.png */; };
+		4B9ACD9714E349D4006BC0D6 /* SLDACategoryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9ACD9514E349D3006BC0D6 /* SLDACategoryVC.m */; };
+		4B9ACD9814E349D4006BC0D6 /* SLDACategoryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B9ACD9614E349D3006BC0D6 /* SLDACategoryVC.xib */; };
+		4B9ACDA414E45C5D006BC0D6 /* nws_round_black1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B9ACD9914E45C5D006BC0D6 /* nws_round_black1.png */; };
+		4B9ACDA514E45C5D006BC0D6 /* nws_round_blue1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B9ACD9A14E45C5D006BC0D6 /* nws_round_blue1.png */; };
+		4B9ACDA614E45C5D006BC0D6 /* nws_round_brown1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B9ACD9B14E45C5D006BC0D6 /* nws_round_brown1.png */; };
+		4B9ACDA714E45C5D006BC0D6 /* nws_round_cyan1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B9ACD9C14E45C5D006BC0D6 /* nws_round_cyan1.png */; };
+		4B9ACDA814E45C5D006BC0D6 /* nws_round_green1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B9ACD9D14E45C5D006BC0D6 /* nws_round_green1.png */; };
+		4B9ACDA914E45C5D006BC0D6 /* nws_round_magenta1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B9ACD9E14E45C5D006BC0D6 /* nws_round_magenta1.png */; };
+		4B9ACDAA14E45C5D006BC0D6 /* nws_round_orange1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B9ACD9F14E45C5D006BC0D6 /* nws_round_orange1.png */; };
+		4B9ACDAB14E45C5D006BC0D6 /* nws_round_purple1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B9ACDA014E45C5D006BC0D6 /* nws_round_purple1.png */; };
+		4B9ACDAC14E45C5D006BC0D6 /* nws_round_red1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B9ACDA114E45C5D006BC0D6 /* nws_round_red1.png */; };
+		4B9ACDAD14E45C5D006BC0D6 /* nws_round_white1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B9ACDA214E45C5D006BC0D6 /* nws_round_white1.png */; };
+		4B9ACDAE14E45C5D006BC0D6 /* nws_round_yellow1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B9ACDA314E45C5D006BC0D6 /* nws_round_yellow1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4B26D63614E9935C000A8EA3 /* DummyDataLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DummyDataLoader.h; sourceTree = "<group>"; };
+		4B26D63714E9935C000A8EA3 /* DummyDataLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DummyDataLoader.m; sourceTree = "<group>"; };
+		4B26D63914E995A0000A8EA3 /* SLADataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLADataModel.h; sourceTree = "<group>"; };
+		4B26D63A14E995A0000A8EA3 /* SLADataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLADataModel.m; sourceTree = "<group>"; };
 		4B9ACD1714DCAB83006BC0D6 /* SLDA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SLDA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B9ACD1B14DCAB83006BC0D6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4B9ACD1D14DCAB83006BC0D6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -84,6 +103,20 @@
 		4B9ACD8C14E31AC0006BC0D6 /* NSManagedObjectContext+IVGUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+IVGUtils.h"; sourceTree = "<group>"; };
 		4B9ACD8D14E32590006BC0D6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		4B9ACD9214E343A9006BC0D6 /* iPhone blue pluss button 37 x 37.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhone blue pluss button 37 x 37.png"; sourceTree = "<group>"; };
+		4B9ACD9414E349D2006BC0D6 /* SLDACategoryVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLDACategoryVC.h; sourceTree = "<group>"; };
+		4B9ACD9514E349D3006BC0D6 /* SLDACategoryVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLDACategoryVC.m; sourceTree = "<group>"; };
+		4B9ACD9614E349D3006BC0D6 /* SLDACategoryVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLDACategoryVC.xib; sourceTree = "<group>"; };
+		4B9ACD9914E45C5D006BC0D6 /* nws_round_black1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nws_round_black1.png; sourceTree = "<group>"; };
+		4B9ACD9A14E45C5D006BC0D6 /* nws_round_blue1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nws_round_blue1.png; sourceTree = "<group>"; };
+		4B9ACD9B14E45C5D006BC0D6 /* nws_round_brown1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nws_round_brown1.png; sourceTree = "<group>"; };
+		4B9ACD9C14E45C5D006BC0D6 /* nws_round_cyan1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nws_round_cyan1.png; sourceTree = "<group>"; };
+		4B9ACD9D14E45C5D006BC0D6 /* nws_round_green1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nws_round_green1.png; sourceTree = "<group>"; };
+		4B9ACD9E14E45C5D006BC0D6 /* nws_round_magenta1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nws_round_magenta1.png; sourceTree = "<group>"; };
+		4B9ACD9F14E45C5D006BC0D6 /* nws_round_orange1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nws_round_orange1.png; sourceTree = "<group>"; };
+		4B9ACDA014E45C5D006BC0D6 /* nws_round_purple1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nws_round_purple1.png; sourceTree = "<group>"; };
+		4B9ACDA114E45C5D006BC0D6 /* nws_round_red1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nws_round_red1.png; sourceTree = "<group>"; };
+		4B9ACDA214E45C5D006BC0D6 /* nws_round_white1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nws_round_white1.png; sourceTree = "<group>"; };
+		4B9ACDA314E45C5D006BC0D6 /* nws_round_yellow1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nws_round_yellow1.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +134,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B26D63414E99320000A8EA3 /* dummy classes */ = {
+			isa = PBXGroup;
+			children = (
+				4B26D63614E9935C000A8EA3 /* DummyDataLoader.h */,
+				4B26D63714E9935C000A8EA3 /* DummyDataLoader.m */,
+			);
+			name = "dummy classes";
+			sourceTree = "<group>";
+		};
 		4B9ACD0C14DCAB83006BC0D6 = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +177,9 @@
 			children = (
 				4B9ACD2A14DCAB83006BC0D6 /* SLDAAppDelegate.h */,
 				4B9ACD2B14DCAB83006BC0D6 /* SLDAAppDelegate.m */,
+				4B26D63914E995A0000A8EA3 /* SLADataModel.h */,
+				4B26D63A14E995A0000A8EA3 /* SLADataModel.m */,
+				4B26D63414E99320000A8EA3 /* dummy classes */,
 				4B9ACD8014E30894006BC0D6 /* Core Data */,
 				4B9ACD7F14E30871006BC0D6 /* View Controllers */,
 				4B9ACD4C14DCB941006BC0D6 /* SLDAToDoTVCell.h */,
@@ -187,6 +232,9 @@
 				4B9ACD7614E0D0EA006BC0D6 /* SLDAProjectVC.h */,
 				4B9ACD7714E0D0EA006BC0D6 /* SLDAProjectVC.m */,
 				4B9ACD7814E0D0EB006BC0D6 /* SLDAProjectVC.xib */,
+				4B9ACD9414E349D2006BC0D6 /* SLDACategoryVC.h */,
+				4B9ACD9514E349D3006BC0D6 /* SLDACategoryVC.m */,
+				4B9ACD9614E349D3006BC0D6 /* SLDACategoryVC.xib */,
 				4B9ACD3414DCAB84006BC0D6 /* SLDASettingsViewController.h */,
 				4B9ACD3514DCAB84006BC0D6 /* SLDASettingsViewController.m */,
 				4B9ACD3E14DCAB84006BC0D6 /* SLDASettingsViewController.xib */,
@@ -211,6 +259,17 @@
 		4B9ACD8F14E33C47006BC0D6 /* resouces */ = {
 			isa = PBXGroup;
 			children = (
+				4B9ACD9914E45C5D006BC0D6 /* nws_round_black1.png */,
+				4B9ACD9A14E45C5D006BC0D6 /* nws_round_blue1.png */,
+				4B9ACD9B14E45C5D006BC0D6 /* nws_round_brown1.png */,
+				4B9ACD9C14E45C5D006BC0D6 /* nws_round_cyan1.png */,
+				4B9ACD9D14E45C5D006BC0D6 /* nws_round_green1.png */,
+				4B9ACD9E14E45C5D006BC0D6 /* nws_round_magenta1.png */,
+				4B9ACD9F14E45C5D006BC0D6 /* nws_round_orange1.png */,
+				4B9ACDA014E45C5D006BC0D6 /* nws_round_purple1.png */,
+				4B9ACDA114E45C5D006BC0D6 /* nws_round_red1.png */,
+				4B9ACDA214E45C5D006BC0D6 /* nws_round_white1.png */,
+				4B9ACDA314E45C5D006BC0D6 /* nws_round_yellow1.png */,
 				4B9ACD9214E343A9006BC0D6 /* iPhone blue pluss button 37 x 37.png */,
 			);
 			name = resouces;
@@ -277,6 +336,18 @@
 				4B9ACD4714DCAD4A006BC0D6 /* SLDAToDoTVCell.xib in Resources */,
 				4B9ACD7A14E0D0EC006BC0D6 /* SLDAProjectVC.xib in Resources */,
 				4B9ACD9314E343A9006BC0D6 /* iPhone blue pluss button 37 x 37.png in Resources */,
+				4B9ACD9814E349D4006BC0D6 /* SLDACategoryVC.xib in Resources */,
+				4B9ACDA414E45C5D006BC0D6 /* nws_round_black1.png in Resources */,
+				4B9ACDA514E45C5D006BC0D6 /* nws_round_blue1.png in Resources */,
+				4B9ACDA614E45C5D006BC0D6 /* nws_round_brown1.png in Resources */,
+				4B9ACDA714E45C5D006BC0D6 /* nws_round_cyan1.png in Resources */,
+				4B9ACDA814E45C5D006BC0D6 /* nws_round_green1.png in Resources */,
+				4B9ACDA914E45C5D006BC0D6 /* nws_round_magenta1.png in Resources */,
+				4B9ACDAA14E45C5D006BC0D6 /* nws_round_orange1.png in Resources */,
+				4B9ACDAB14E45C5D006BC0D6 /* nws_round_purple1.png in Resources */,
+				4B9ACDAC14E45C5D006BC0D6 /* nws_round_red1.png in Resources */,
+				4B9ACDAD14E45C5D006BC0D6 /* nws_round_white1.png in Resources */,
+				4B9ACDAE14E45C5D006BC0D6 /* nws_round_yellow1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +373,9 @@
 				4B9ACD8614E30C13006BC0D6 /* Project.m in Sources */,
 				4B9ACD8914E30C13006BC0D6 /* CalendarEvent.m in Sources */,
 				4B9ACD8B14E31AB1006BC0D6 /* NSManagedObjectContext+IVGUtils.m in Sources */,
+				4B9ACD9714E349D4006BC0D6 /* SLDACategoryVC.m in Sources */,
+				4B26D63814E9935D000A8EA3 /* DummyDataLoader.m in Sources */,
+				4B26D63B14E995A0000A8EA3 /* SLADataModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
