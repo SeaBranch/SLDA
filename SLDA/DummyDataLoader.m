@@ -50,23 +50,21 @@
     CalendarEvent* even1b = [ctx insertNewEntityWithName:@"CalendarEvent"];
     CalendarEvent* even2a = [ctx insertNewEntityWithName:@"CalendarEvent"];
     CalendarEvent* even2b = [ctx insertNewEntityWithName:@"CalendarEvent"];
+    [projA addEventsObject:even1a],[projA addEventsObject:even1b];
+    [projB addEventsObject:even2a],[projB addEventsObject:even2b];
     
     even1a.title = @"event 1 a";
     even1b.title = @"event 1 b";
     even2a.title = @"event 2 a";
     even2b.title = @"event 2 b";
-    even1a.startDate = [IVGUtils dateFromString:@"Sep 1" withFormat:@"MMM d"];
-    even1b.startDate = [IVGUtils dateFromString:@"Sep 4" withFormat:@"MMM d"];
-    even2a.startDate = [IVGUtils dateFromString:@"Sep 2" withFormat:@"MMM d"];
-    even2b.startDate = [IVGUtils dateFromString:@"Sep 7" withFormat:@"MMM d"];
+    even1a.startDate = [IVGUtils dateFromString:@"Jan 1 1999" withFormat:@"MMM d yyyy"];
+    even1b.startDate = [IVGUtils dateFromString:@"Jan 4 2009" withFormat:@"MMM d yyyy"];
+    even2a.startDate = [IVGUtils dateFromString:@"Feb 2 2012" withFormat:@"MMM d yyyy"];
+    even2b.startDate = [IVGUtils dateFromString:@"Sep 7 2012" withFormat:@"MMM d yyyy"];
     even1a.endDate = [IVGUtils dateFromString:@"Sep 4" withFormat:@"MMM d"];
     even1b.endDate = even1b.project.completionDate;
     even2a.endDate = [IVGUtils dateFromString:@"Sep 6" withFormat:@"MMM d"];
     even2b.endDate = even2b.project.completionDate;
-    
-    [projA addEventsObject:even1a],[projA addEventsObject:even1b];
-    [projB addEventsObject:even2a],[projB addEventsObject:even2b];
-
     
     
     [ctx save:nil];

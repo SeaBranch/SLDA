@@ -39,6 +39,7 @@
     if (self) {
         self.title = NSLocalizedString(@"To Do", @"To Do");
         self.tabBarItem.image = [UIImage imageNamed:@"First"];
+        eventsArray = [NSArray array];
                 
     }
     return self;
@@ -191,25 +192,28 @@
 
     NSManagedObjectContext* ctx = [SLADataModel sharedDataModel].context;    
     
-    NSArray *fetchedResults = [ctx fetchObjectsForEntityName:@"CalendarEvent" withPredicate:nil];
-    NSMutableArray *filteredResults;
+    NSArray *fetchedResults = [[ctx fetchObjectsForEntityName:@"CalendarEvent" withPredicate:nil] autorelease];
+    NSMutableArray *filteredResults = [NSMutableArray array];
     
     
-    for (int i = 0; i<[fetchedResults count]; i++){
-        
-        CalendarEvent* evnt = [fetchedResults objectAtIndex:i];
-        
+    for (CalendarEvent* evnt in fetchedResults){
+                
         NSComparisonResult r = [evnt.startDate compare:[NSDate date]];
         
-        
-        if (r <= 0) {
+        NSLog(@"start date = %@ r = %d",evnt.startDate, r);
+        if (r <= NSOrderedSame) {
             [filteredResults addObject:evnt];
+        }
+        else{
+        
+            NSLog(@"too late");
+        
         }
         
     
     }
     
-    NSArray* result; [result arrayByAddingObjectsFromArray:filteredResults];
+    NSArray* result = [NSArray arrayWithArray:filteredResults];
     
     return result;
 }
