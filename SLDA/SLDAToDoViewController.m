@@ -16,6 +16,9 @@
 @interface SLDAToDoViewController()
 
 @property (nonatomic, copy) NSMutableArray *data;
+@property (nonatomic, retain) NSArray* eventsArray;
+
+- (NSArray*) pullDataFromContext;
 
 @end
 
@@ -28,6 +31,7 @@
 @synthesize tableView = tableView_;
 @synthesize data = data_;
 @synthesize configCell;
+@synthesize eventsArray;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -61,6 +65,7 @@
 
 - (void)viewDidLoad
 {
+    self.eventsArray = [self pullDataFromContext];
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
@@ -103,7 +108,7 @@
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 5;
+    return 1;
 }
 
 //- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
@@ -166,27 +171,13 @@
         //[cell configureInitial];
     }
     
+    CalendarEvent *aEvent = [eventsArray objectAtIndex:indexPath.row];
+    NSString* titleStr = aEvent.title;
+    NSDate* displayDate = aEvent.endDate;
     
+    [cell configureData:titleStr withDate:displayDate];
     
-    [cell configureData:@"test name" withDate:[self dateFromYear:2011 month:9 day:8 hour:13 minute:0 second:0]];
-
-    /*
-    static NSString *cellIdentifier = @"cell";
-    UITableViewCell *cell = (UITableViewCell *) [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    NSLog(@"tvc[%@] cell=%@", indexPath, cell);
-    if (cell == nil) {
-        
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier] autorelease];
-    }
-    cell.textLabel.text = [NSString stringWithFormat:@"row:%d",[indexPath row]];*/
-    
-//    NSMutableArray *sectionData = [self.data objectAtIndex:[indexPath section] outOfRange:nil];
-//    NSMutableArray *exhibitorData = [sectionData objectAtIndex:[indexPath row] outOfRange:nil];
-//    [cell configureForController:self forData:exhibitorData];
     return cell;
-    
-    
-    
 }
 
 
@@ -196,21 +187,31 @@
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
-- (void) pullDataFromContext{
+- (NSArray*) pullDataFromContext{
 
-    NSManagedObjectContext* ctx = [SLADataModel sharedDataModel].context;
-    NSEntityDescription* entity = [NSEntityDescription entityForName:@"CalendarEvent" inManagedObjectContext:ctx];
+    NSManagedObjectContext* ctx = [SLADataModel sharedDataModel].context;    
+    
+    NSArray *fetchedResults = [ctx fetchObjectsForEntityName:@"CalendarEvent" withPredicate:nil];
+    NSMutableArray *filteredResults;
     
     
-    NSArray *fetchedResults;
     for (int i = 0; i<[fetchedResults count]; i++){
-    
+        
         CalendarEvent* evnt = [fetchedResults objectAtIndex:i];
         
+        NSComparisonResult r = [evnt.startDate compare:[NSDate date]];
+        
+        
+        if (r <= 0) {
+            [filteredResults addObject:evnt];
+        }
         
     
     }
     
+    NSArray* result; [result arrayByAddingObjectsFromArray:filteredResults];
+    
+    return result;
 }
 
 
@@ -218,7 +219,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
 {
-    return 5;
+   return [eventsArray count];
 }
 
 
