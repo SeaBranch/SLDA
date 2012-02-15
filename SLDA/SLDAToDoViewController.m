@@ -46,10 +46,10 @@
     if (self) {
         self.title = NSLocalizedString(@"To Do", @"To Do");
         self.tabBarItem.image = [UIImage imageNamed:@"First"];
-        eventsArray = [NSArray array];
-        toDoEvents = [NSMutableArray array];
-        doneEvents = [NSMutableArray array];
-        viewedEvents = [NSMutableArray array];
+        eventsArray = [[NSArray alloc] init];
+        toDoEvents = [[NSMutableArray alloc] init];
+        doneEvents = [[NSMutableArray alloc] init];
+        viewedEvents = [[NSMutableArray alloc] init];
         displayYetToDoItems = YES;
                 
     }
@@ -104,7 +104,6 @@
 -(void)configureViewed{
     
     [viewedEvents removeAllObjects];
-    viewedEvents = nil;
 
     if (displayYetToDoItems) {
         viewedEvents = [NSMutableArray arrayWithArray:toDoEvents];
@@ -167,7 +166,7 @@
 -(IBAction)pressedSegmentedButton:(id)sender{
 
     displayYetToDoItems = !displayYetToDoItems;
-    [tableView_ reloadData];
+    [self.tableView reloadData];
     [self sortData]; 
 
 
@@ -246,8 +245,7 @@
 
 - (void) handleToDoDoneToggle:(NSNotification*)notification{
     
-    [tableView_ reloadData];
-    self.eventsArray = [self pullDataFromContext];
+    [self.tableView reloadData];
 
 }
 

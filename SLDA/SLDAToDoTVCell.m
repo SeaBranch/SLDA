@@ -23,7 +23,7 @@
 @synthesize nameLabel = nameLabel_;
 @synthesize dueLabel = dueLabel_;
 @synthesize dueDate = dueDate_;
-@synthesize cellsEvent;
+@synthesize cellsEvent = cellsEvent_;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -40,6 +40,7 @@
     [nameLabel_ release], nameLabel_ = nil;
     [dueLabel_ release], dueLabel_ = nil;
     [dueDate_ release], dueDate_ = nil;
+    [cellsEvent_ release],cellsEvent_ = nil;
     
 }
 
