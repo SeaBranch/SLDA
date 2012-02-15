@@ -226,7 +226,7 @@
     
     for (CalendarEvent* evnt in eventsArray){
         
-        if (evnt.isDone) {
+        if ([evnt.isDone boolValue]) {
             [doneEvents addObject:evnt];
         }
         else{
