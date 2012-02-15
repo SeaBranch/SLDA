@@ -21,8 +21,6 @@
 @property (nonatomic, retain) NSMutableArray* doneEvents;
 @property (nonatomic, retain) NSMutableArray* viewedEvents;
 
-- (NSArray*) pullDataFromContext;
-
 @end
 
 
@@ -50,10 +48,7 @@
         toDoEvents_ = [[NSMutableArray alloc] init];
         doneEvents_ = [[NSMutableArray alloc] init];
         viewedEvents_ = [[NSMutableArray alloc] init];
-        displayYetToDoItems_ = YES;
-        
-        
-                
+        displayYetToDoItems_ = YES;          
     }
     return self;
 }
@@ -66,6 +61,11 @@
     [doneNotDoneSC_ release], doneNotDoneSC_ = nil;
     [tableView_ release], tableView_ = nil;
     [data_ release], data_ = nil;
+    [eventsArray_ release], eventsArray_ = nil;
+    [toDoEvents_ release], toDoEvents_ = nil;
+    [doneEvents_ release], doneEvents_ = nil;
+    [viewedEvents_ release], viewedEvents_ = nil;
+
     [super dealloc];
 
 }
@@ -80,8 +80,7 @@
 
 - (void)viewDidLoad
 {
-    self.eventsArray = [self pullDataFromContext];
-    [self sortData]; 
+    [self configureTableView];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleToDoDoneToggle:) name:kToDoCellDoneNotification object:nil];   
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
@@ -101,19 +100,6 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
-}
-
--(void)configureViewed{
-    
-    [self.viewedEvents removeAllObjects];
-
-    if (self.displayYetToDoItems) {
-        self.viewedEvents = [NSMutableArray arrayWithArray:self.toDoEvents];
-    }
-    else{
-        self.viewedEvents = [NSMutableArray arrayWithArray:self.doneEvents];
-    }
-    
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -170,9 +156,7 @@
     NSLog(@"pressed SC");
     
     self.displayYetToDoItems = !self.displayYetToDoItems;
-    self.eventsArray = [self pullDataFromContext];
-    [self sortData]; 
-    [self.tableView reloadData];
+    [self configureTableView];
 
 
 }
@@ -203,11 +187,25 @@
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
-- (NSArray*) pullDataFromContext{
+-(void)configureTableView{
     
-    NSLog(@"NSLOG ALL THE LINES!!!!");
+    if (eventsArray_ != nil) {
+        self.eventsArray = nil;
+        self.eventsArray = [[NSArray alloc] init];
+    }
+    if (toDoEvents_ !=nil) {
+        self.toDoEvents = nil;
+        self.toDoEvents = [[NSMutableArray alloc] init];
+    }
+    if (doneEvents_ != nil) {
+        self.doneEvents = nil;
+        self.doneEvents = [[NSMutableArray alloc] init];
+    }
+    if (viewedEvents_ != nil) {
+        self.viewedEvents = nil;
+        self.viewedEvents = [[NSMutableArray alloc] init];
+    }
     
-
     NSManagedObjectContext* ctx = [SLADataModel sharedDataModel].context;  
     NSArray *fetchedResults = [[ctx fetchObjectsForEntityName:@"CalendarEvent" withPredicate:nil] autorelease];
     NSMutableArray *filteredResults = [NSMutableArray array];
@@ -220,14 +218,8 @@
             [filteredResults addObject:evnt];
         }
     }
-    NSArray* result = [NSArray arrayWithArray:filteredResults];    
-    return result;
-}
+    self.eventsArray = [NSArray arrayWithArray:filteredResults];    
 
-- (void)sortData{
-    [self.toDoEvents removeAllObjects];
-    [self.doneEvents removeAllObjects];
-    
     for (CalendarEvent* evnt in self.eventsArray){
         
         if ([evnt.isDone boolValue]) {
@@ -237,7 +229,14 @@
             [self.toDoEvents addObject:evnt];
         }
     }
-    [self configureViewed];
+    if (self.displayYetToDoItems) {
+        self.viewedEvents = [NSMutableArray arrayWithArray:self.toDoEvents];
+    }
+    else{
+        self.viewedEvents = [NSMutableArray arrayWithArray:self.doneEvents];
+    }
+
+    [self.tableView reloadData];
 }
 
 
@@ -250,8 +249,7 @@
 
 - (void) handleToDoDoneToggle:(NSNotification*)notification{
     
-    [self sortData];
-    [self.tableView reloadData];
+    [self configureTableView];
 
 }
 

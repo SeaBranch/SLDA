@@ -20,8 +20,7 @@
 @property (nonatomic,retain) IBOutlet SLDAToDoTVCell *configCell;
 @property BOOL displayYetToDoItems;
 
-- (void)configureViewed;
-- (void)sortData;
+-(void)configureTableView;
 
 -(IBAction)pressedAddButton:(id)sender;
 -(IBAction)pressedSegmentedButton:(id)sender;
