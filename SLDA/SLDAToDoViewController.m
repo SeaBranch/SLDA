@@ -46,11 +46,11 @@
     if (self) {
         self.title = NSLocalizedString(@"To Do", @"To Do");
         self.tabBarItem.image = [UIImage imageNamed:@"First"];
-        eventsArray = [[NSArray alloc] init];
-        toDoEvents = [[NSMutableArray alloc] init];
-        doneEvents = [[NSMutableArray alloc] init];
-        viewedEvents = [[NSMutableArray alloc] init];
-        displayYetToDoItems = YES;
+        self.eventsArray = [[NSArray alloc] init];
+        self.toDoEvents = [[NSMutableArray alloc] init];
+        self.doneEvents = [[NSMutableArray alloc] init];
+        self.viewedEvents = [[NSMutableArray alloc] init];
+        self.displayYetToDoItems = YES;
                 
     }
     return self;
@@ -106,10 +106,10 @@
     [viewedEvents removeAllObjects];
 
     if (displayYetToDoItems) {
-        viewedEvents = [NSMutableArray arrayWithArray:toDoEvents];
+        self.viewedEvents = [NSMutableArray arrayWithArray:toDoEvents];
     }
     else{
-        viewedEvents = [NSMutableArray arrayWithArray:doneEvents];
+        self.viewedEvents = [NSMutableArray arrayWithArray:doneEvents];
     }
     
 }
@@ -166,15 +166,15 @@
 -(IBAction)pressedSegmentedButton:(id)sender{
 
     displayYetToDoItems = !displayYetToDoItems;
-    [self.tableView reloadData];
     [self sortData]; 
+    [self.tableView reloadData];
 
 
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    CalendarEvent *aEvent = [viewedEvents objectAtIndex:indexPath.row];
+    CalendarEvent *aEvent = [self.viewedEvents objectAtIndex:indexPath.row];
     
     static NSString *cellIdentifier = @"SLDAToDoTVCellid";
     SLDAToDoTVCell *cell = (SLDAToDoTVCell *) [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
@@ -220,8 +220,8 @@
 }
 
 - (void)sortData{
-    [toDoEvents removeAllObjects];
-    [doneEvents removeAllObjects];
+    [self.toDoEvents removeAllObjects];
+    [self.doneEvents removeAllObjects];
     
     for (CalendarEvent* evnt in eventsArray){
         
@@ -240,11 +240,12 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
 {
-   return [viewedEvents count];
+   return [self.viewedEvents count];
 }
 
 - (void) handleToDoDoneToggle:(NSNotification*)notification{
     
+    [self sortData];
     [self.tableView reloadData];
 
 }
