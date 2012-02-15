@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SLAConstants.h"
 
 @interface SLDAToDoTVCell : UITableViewCell
 
@@ -15,6 +16,7 @@
 @property (nonatomic, retain) IBOutlet UILabel *dueLabel;
 @property (nonatomic, retain) NSDate *dueDate;
 
--(void) configureData:(NSString*)name withDate:(NSDate*)date;
 
+-(IBAction)doneButtonPressed:(id)sender;
+-(void) configureData:(CalendarEvent*)evnt;
 @end

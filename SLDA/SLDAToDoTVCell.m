@@ -8,14 +8,22 @@
 
 #import "SLDAToDoTVCell.h"
 #import "IVGUtils.h"
+#import "SLACoreDataFiles.h"
+
+@interface SLDAToDoTVCell()
+
+@property (nonatomic,retain) CalendarEvent* cellsEvent;
+
+@end
+
 
 @implementation SLDAToDoTVCell
-
 
 @synthesize toggleDoneButton = toggleDoneButton_;
 @synthesize nameLabel = nameLabel_;
 @synthesize dueLabel = dueLabel_;
 @synthesize dueDate = dueDate_;
+@synthesize cellsEvent;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -41,12 +49,17 @@
 
     // Configure the view for the selected state
 }
--(void) configureData:(NSString*)name withDate:(NSDate*)date{
 
-    self.nameLabel.text = name;
+-(void) configureData:(CalendarEvent*)evnt{
+    self.cellsEvent = evnt;
+    self.nameLabel.text = evnt.title;
+    self.dueLabel.text = [IVGUtils stringFromDate:evnt.endDate withFormat:@"MMM d"];
+}
+
+-(IBAction)doneButtonPressed:(id)sender{
+    self.cellsEvent.isDone = [NSNumber numberWithBool:![self.cellsEvent.isDone boolValue]];
     
-    NSString* dueText = [IVGUtils stringFromDate:date withFormat:@"MMM d"];
-    self.dueLabel.text = dueText;
+    [[NSNotificationCenter defaultCenter] postNotificationName:kToDoCellDoneNotification object:self.cellsEvent];
 }
 
 @end

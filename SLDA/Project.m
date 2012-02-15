@@ -2,38 +2,22 @@
 //  Project.m
 //  SLDA
 //
-//  Created by Nathan Sjoquist on 2/8/12.
+//  Created by Nathan Sjoquist on 2/14/12.
 //  Copyright (c) 2012 Spazz Gaming. All rights reserved.
 //
 
 #import "Project.h"
-#import "Category.h"
 #import "CalendarEvent.h"
+#import "Category.h"
 
 
 @implementation Project
 
-@dynamic title;
 @dynamic completionDate;
+@dynamic title;
 @dynamic type;
-@dynamic events;
+@dynamic isDone;
 @dynamic category;
-
-
-
-- (id)init {
-    self = [super init];
-    if (self) {
-        
-        CalendarEvent* endEvent;
-        endEvent.title = @"complete";
-        endEvent.endDate = nil;
-        endEvent.startDate = self.completionDate;
-        endEvent.category = self.category;
-        
-        [self addEventsObject:endEvent];
-    }
-    return self;
-}
+@dynamic events;
 
 @end

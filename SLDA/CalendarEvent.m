@@ -2,7 +2,7 @@
 //  CalendarEvent.m
 //  SLDA
 //
-//  Created by Nathan Sjoquist on 2/8/12.
+//  Created by Nathan Sjoquist on 2/14/12.
 //  Copyright (c) 2012 Spazz Gaming. All rights reserved.
 //
 
@@ -12,11 +12,10 @@
 
 @implementation CalendarEvent
 
-@dynamic category;
-@dynamic title;
 @dynamic endDate;
 @dynamic startDate;
+@dynamic title;
+@dynamic isDone;
 @dynamic project;
-
 
 @end

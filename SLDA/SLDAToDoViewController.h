@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "SLDAToDoTVCell.h"
+#import "SLAConstants.h"
 
 
 @interface SLDAToDoViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
@@ -17,7 +18,12 @@
 @property (nonatomic,retain) IBOutlet UISegmentedControl *doneNotDoneSC;
 @property (nonatomic,retain) IBOutlet UITableView *tableView;
 @property (nonatomic,retain) IBOutlet SLDAToDoTVCell *configCell;
+@property BOOL displayYetToDoItems;
+
+- (void)configureViewed;
+- (void)sortData;
 
 -(IBAction)pressedAddButton:(id)sender;
+-(IBAction)pressedSegmentedButton:(id)sender;
 
 @end

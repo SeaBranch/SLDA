@@ -2,6 +2,7 @@
 <model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="872" systemVersion="10K549" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="CalendarEvent" representedClassName="CalendarEvent" syncable="YES">
         <attribute name="endDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="isDone" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
         <attribute name="startDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="project" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Project" inverseName="events" inverseEntity="Project" syncable="YES"/>
@@ -13,14 +14,15 @@
     </entity>
     <entity name="Project" representedClassName="Project" syncable="YES">
         <attribute name="completionDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="isDone" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="category" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Category" inverseName="projects" inverseEntity="Category" syncable="YES"/>
         <relationship name="events" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="CalendarEvent" inverseName="project" inverseEntity="CalendarEvent" syncable="YES"/>
     </entity>
     <elements>
-        <element name="CalendarEvent" positionX="333" positionY="-27" width="128" height="105"/>
+        <element name="CalendarEvent" positionX="333" positionY="-27" width="128" height="120"/>
         <element name="Category" positionX="-11" positionY="-27" width="128" height="90"/>
-        <element name="Project" positionX="160" positionY="-27" width="128" height="120"/>
+        <element name="Project" positionX="160" positionY="-27" width="128" height="135"/>
     </elements>
 </model>
