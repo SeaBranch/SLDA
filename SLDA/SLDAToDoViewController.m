@@ -33,12 +33,12 @@
 @synthesize doneNotDoneSC = doneNotDoneSC_;
 @synthesize tableView = tableView_;
 @synthesize data = data_;
-@synthesize configCell;
-@synthesize eventsArray;
-@synthesize doneEvents;
-@synthesize toDoEvents;
-@synthesize viewedEvents;
-@synthesize displayYetToDoItems;
+@synthesize configCell = configCell_;
+@synthesize eventsArray = eventsArray_;
+@synthesize doneEvents = doneEvents_;
+@synthesize toDoEvents = toDoEvents_;
+@synthesize viewedEvents = viewedEvents_;
+@synthesize displayYetToDoItems = displayYetToDoItems_;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -46,11 +46,13 @@
     if (self) {
         self.title = NSLocalizedString(@"To Do", @"To Do");
         self.tabBarItem.image = [UIImage imageNamed:@"First"];
-        self.eventsArray = [[NSArray alloc] init];
-        self.toDoEvents = [[NSMutableArray alloc] init];
-        self.doneEvents = [[NSMutableArray alloc] init];
-        self.viewedEvents = [[NSMutableArray alloc] init];
-        self.displayYetToDoItems = YES;
+        eventsArray_ = [[NSArray alloc] init];
+        toDoEvents_ = [[NSMutableArray alloc] init];
+        doneEvents_ = [[NSMutableArray alloc] init];
+        viewedEvents_ = [[NSMutableArray alloc] init];
+        displayYetToDoItems_ = YES;
+        
+        
                 
     }
     return self;
@@ -103,13 +105,13 @@
 
 -(void)configureViewed{
     
-    [viewedEvents removeAllObjects];
+    [self.viewedEvents removeAllObjects];
 
-    if (displayYetToDoItems) {
-        self.viewedEvents = [NSMutableArray arrayWithArray:toDoEvents];
+    if (self.displayYetToDoItems) {
+        self.viewedEvents = [NSMutableArray arrayWithArray:self.toDoEvents];
     }
     else{
-        self.viewedEvents = [NSMutableArray arrayWithArray:doneEvents];
+        self.viewedEvents = [NSMutableArray arrayWithArray:self.doneEvents];
     }
     
 }
@@ -165,7 +167,10 @@
 
 -(IBAction)pressedSegmentedButton:(id)sender{
 
-    displayYetToDoItems = !displayYetToDoItems;
+    NSLog(@"pressed SC");
+    
+    self.displayYetToDoItems = !self.displayYetToDoItems;
+    self.eventsArray = [self pullDataFromContext];
     [self sortData]; 
     [self.tableView reloadData];
 
@@ -223,13 +228,13 @@
     [self.toDoEvents removeAllObjects];
     [self.doneEvents removeAllObjects];
     
-    for (CalendarEvent* evnt in eventsArray){
+    for (CalendarEvent* evnt in self.eventsArray){
         
         if ([evnt.isDone boolValue]) {
-            [doneEvents addObject:evnt];
+            [self.doneEvents addObject:evnt];
         }
         else{
-            [toDoEvents addObject:evnt];
+            [self.toDoEvents addObject:evnt];
         }
     }
     [self configureViewed];
