@@ -16,9 +16,6 @@
 @interface SLDAToDoViewController()
 
 @property (nonatomic, retain) NSArray* eventsArray;
-@property (nonatomic, retain) NSMutableArray* toDoEvents;
-@property (nonatomic, retain) NSMutableArray* doneEvents;
-@property (nonatomic, retain) NSMutableArray* viewedEvents;
 
 @end
 
@@ -31,9 +28,6 @@
 @synthesize tableView = tableView_;
 @synthesize configCell = configCell_;
 @synthesize eventsArray = eventsArray_;
-@synthesize doneEvents = doneEvents_;
-@synthesize toDoEvents = toDoEvents_;
-@synthesize viewedEvents = viewedEvents_;
 @synthesize displayYetToDoItems = displayYetToDoItems_;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -42,10 +36,6 @@
     if (self) {
         self.title = NSLocalizedString(@"To Do", @"To Do");
         self.tabBarItem.image = [UIImage imageNamed:@"First"];
-        eventsArray_ = [[NSArray alloc] init];
-        toDoEvents_ = [[NSMutableArray alloc] init];
-        doneEvents_ = [[NSMutableArray alloc] init];
-        viewedEvents_ = [[NSMutableArray alloc] init];
         displayYetToDoItems_ = YES;          
     }
     return self;
@@ -54,14 +44,12 @@
 -(void) dealloc {
 
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+
     [editBBI_ release], editBBI_ = nil;
     [addBBI_ release], addBBI_ = nil;
     [doneNotDoneSC_ release], doneNotDoneSC_ = nil;
     [tableView_ release], tableView_ = nil;
     [eventsArray_ release], eventsArray_ = nil;
-    [toDoEvents_ release], toDoEvents_ = nil;
-    [doneEvents_ release], doneEvents_ = nil;
-    [viewedEvents_ release], viewedEvents_ = nil;
 
     [super dealloc];
 
@@ -86,8 +74,6 @@
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     self.eventsArray = nil;
-    self.toDoEvents = nil;
-    self.doneEvents = nil;
     self.editBBI = nil;
     self.addBBI = nil;
     self.doneNotDoneSC = nil;
@@ -144,7 +130,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    CalendarEvent *aEvent = [self.viewedEvents objectAtIndex:indexPath.row];
+    CalendarEvent *aEvent = [self.eventsArray objectAtIndex:indexPath.row];
     
     static NSString *cellIdentifier = @"SLDAToDoTVCellid";
     SLDAToDoTVCell *cell = (SLDAToDoTVCell *) [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
@@ -169,21 +155,10 @@
 }
 
 -(void)configureTableView{
-    
-    if (self.toDoEvents !=nil) {
-        [self.toDoEvents removeAllObjects];
-    }
-    if (self.doneEvents != nil) {
-        [self.doneEvents removeAllObjects];
-    }
-    if (self.viewedEvents != nil) {
-        [self.viewedEvents removeAllObjects];
-    }
-    
     NSLog(@"got rid of old");
     
     NSManagedObjectContext* ctx = [SLADataModel sharedDataModel].context;  
-    NSArray *fetchedResults = [[ctx fetchObjectsForEntityName:@"CalendarEvent" withPredicate:nil] autorelease];
+    NSArray *fetchedResults = [ctx fetchObjectsForEntityName:@"CalendarEvent" withPredicate:nil];
     NSMutableArray *filteredResults = [NSMutableArray array];
     
     NSLog(@"got context and pulled data");
@@ -193,31 +168,15 @@
         
         NSLog(@"start date = %@ r = %d",evnt.startDate, r);
         if (r <= NSOrderedSame) {
-            [filteredResults addObject:evnt];
+
+            if ([evnt.isDone boolValue] != self.displayYetToDoItems) {
+                [filteredResults addObject:evnt];
+            }
         }
     }
     NSLog(@"did the loop");
     
     self.eventsArray = [NSArray arrayWithArray:filteredResults]; 
-    
-    NSLog(@"events array again");
-    
-    for (CalendarEvent* evnt in self.eventsArray){
-        
-        if ([evnt.isDone boolValue]) {
-            [self.doneEvents addObject:evnt];
-        }
-        else{
-            [self.toDoEvents addObject:evnt];
-        }
-    }
-    NSLog(@"sorted");
-    if (self.displayYetToDoItems) {
-        self.viewedEvents = [NSMutableArray arrayWithArray:self.toDoEvents];
-    }
-    else{
-        self.viewedEvents = [NSMutableArray arrayWithArray:self.doneEvents];
-    }
 }
 
 
@@ -225,17 +184,20 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
 {
-   return [self.viewedEvents count];
+   return [self.eventsArray count];
 }
 
 - (void) handleToDoDoneToggle:(NSNotification*)notification{
     
+    NSManagedObjectContext* ctx = [SLADataModel sharedDataModel].context;  
+    if ([ctx save:nil]) {
+        NSLog(@"saved event changes");
+    }
     
     [self configureTableView];
     [self.tableView reloadData];
     
-    NSLog(@"object: %@", viewedEvents_);
-    NSLog(@"object2: %@", eventsArray_);
+    NSLog(@"object: %@", self.eventsArray);
 
 }
 

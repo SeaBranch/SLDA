@@ -25,17 +25,6 @@
 @synthesize dueDate = dueDate_;
 @synthesize cellsEvent = cellsEvent_;
 
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
-{
-    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    if (self) {
-        
-        cellsEvent_ = [[CalendarEvent alloc] init];
-        // Initialization code
-    }
-    return self;
-}
-
 - (void) dealloc {
 
     [toggleDoneButton_ release], toggleDoneButton_ = nil;
