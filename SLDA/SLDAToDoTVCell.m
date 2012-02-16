@@ -29,6 +29,8 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
+        
+        cellsEvent_ = [[CalendarEvent alloc] init];
         // Initialization code
     }
     return self;
